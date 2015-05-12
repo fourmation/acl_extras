@@ -111,6 +111,18 @@ class AclExtras extends Object {
  * @return void
  **/
 	public function aco_update($params = array()) {
+		switch($this->args[0]) {
+			case 'live':
+				Configure::write('ENVIRONMENT', 'PRODUCTION');
+				break;
+			case 'stage':
+				Configure::write('ENVIRONMENT', 'STAGE');
+				break;
+			case 'local':
+				Configure::write('ENVIRONMENT', 'LOCAL');
+				break;
+		}
+
 		$root = $this->_checkNode($this->rootNode, $this->rootNode, null);
 
 		if (empty($params['plugin'])) {

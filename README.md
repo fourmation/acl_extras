@@ -2,6 +2,17 @@
 
 Acl Extras provides a console app that helps you manage DbAcl records more easily.  Its main feature and purpose is to make generating Aco nodes for all your controllers and actions easier.  It also includes some helper methods for verifying and recovering corrupted trees.
 
+## 4Mation Update
+
+The function aco_update has been updated to take a single argument, environment. This will set CakePHP's ENVIRONMENT variable which will allow the ACO update to be performed in different environments.
+
+Valid arguments:
+'live'
+'stage'
+'local'
+
+If no argument is passed in the default aco_update behaviour will occur.
+
 ## Installation
 
 Clone the repo or download a tarball and install it into `app/Plugin/AclExtras` or in any of your pluginPaths.
