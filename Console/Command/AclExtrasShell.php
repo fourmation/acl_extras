@@ -70,6 +70,7 @@ class AclExtrasShell extends Shell {
  * @return void
  **/
 	public function aco_update() {
+		$this->AclExtras->args = $this->args;
 		$this->AclExtras->aco_update($this->params);
 		return true;
 	}
