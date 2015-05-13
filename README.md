@@ -11,7 +11,7 @@ Valid arguments:
 'stage'
 'local'
 
-If no argument is passed in the default aco_update behaviour will occur.
+An argument has to be passed in when running the function. If an invalid argument is passed in 'local' environment is chosen.
 
 ## Installation
 
