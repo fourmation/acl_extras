@@ -111,14 +111,14 @@ class AclExtras extends Object {
  * @return void
  **/
 	public function aco_update($params = array()) {
-		switch($this->args[0]) {
+		switch ($this->args[0]) {
 			case 'live':
 				Configure::write('ENVIRONMENT', 'PRODUCTION');
 				break;
 			case 'stage':
 				Configure::write('ENVIRONMENT', 'STAGE');
 				break;
-			case 'local':
+			default:
 				Configure::write('ENVIRONMENT', 'LOCAL');
 				break;
 		}
