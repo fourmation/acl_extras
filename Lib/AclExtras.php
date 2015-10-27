@@ -101,17 +101,6 @@ class AclExtras extends Object {
  * @return void
  **/
 	public function aco_sync($params = array()) {
-		switch ($this->args[0]) {
-			case 'live':
-				Configure::write('ENVIRONMENT', 'PRODUCTION');
-				break;
-			case 'stage':
-				Configure::write('ENVIRONMENT', 'STAGE');
-				break;
-			default:
-				Configure::write('ENVIRONMENT', 'LOCAL');
-				break;
-		}
 		$this->_clean = true;
 		$this->aco_update($params);
 	}
